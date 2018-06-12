@@ -30,13 +30,13 @@ This module uses child processes to call WMIC to gather it's information, if you
 Install windows-cpu via NPM.
 
 ```bash
-npm install windows-cpu --save
+npm install iris-windows-cpu --save
 ```
 
 Require windows-cpu in your own Node.js application.
 
 ```js
-const cpu = require('windows-cpu');
+const cpu = require('iris-windows-cpu');
 ```
 
 ----------
@@ -45,7 +45,7 @@ const cpu = require('windows-cpu');
 When requiring `windows-cpu`, you are returned an isntance of the `WindowsCPU` class. To get access to the constructor to create your own instance, you may do:
 
 ```js
-const WindowsCPU = require('windows-cpu').WindowsCPU;
+const WindowsCPU = require('iris-windows-cpu').WindowsCPU;
 const cpu = new WindowsCPU();
 // ...
 ```
