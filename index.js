@@ -13,6 +13,7 @@ const util = require('util');
 const cp = require('child_process');
 const platform = require('os').platform();
 const commandJoin = require('command-join');
+//const shellQuote = require('shell-quote').quote;
 
 const exec = util.promisify(cp.exec);
 const execFile = util.promisify(cp.execFile);
@@ -68,6 +69,8 @@ class WindowsCPU {
         let cmd = 'wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime,IDProcess';
         if(arg) cmd += ` | findstr /i /c:${commandJoin([arg])}`;
         
+        console.log("cmd::::", cmd)
+
         let { stdout, stderr } = await exec(cmd).catch(e => { throw e; });
         if(stderr) throw new Error(stderr);
         if(!stdout) return { load: 0, results: [] };

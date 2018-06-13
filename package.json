@@ -1,5 +1,5 @@
 {
-  "name": "windows-cpu",
+  "name": "iris-windows-cpu",
   "version": "1.0.1",
   "description": "CPU monitoring utilities for Node.js apps on Windows.",
   "homepage": "https://github.com/KyleRoss/windows-cpu",
@@ -30,7 +30,8 @@
     "url": "https://github.com/KyleRoss/windows-cpu.git"
   },
   "dependencies": {
-    "command-join": "^2.0.0"
+    "command-join": "^2.0.0",
+    "shell-quote": "^1.6.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
